@@ -30,7 +30,7 @@ const Queries = {
       }
     }
   `,
-  ONE_USERS: gql`
+  ONE_USER: gql`
     query oneUser($_id: ID!) {
       oneUser(_id: $_id) {
         _id
