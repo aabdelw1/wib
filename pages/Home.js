@@ -13,7 +13,7 @@ export default function Home() {
         {
           ({ email, password, firstName, lastName, gender, doa, groups, flames }) =>
         <Container>
-          <Text>Helo</Text>
+          <Text>{firstName}</Text>
           <StatusBar style="auto" />
         </Container>
         }       

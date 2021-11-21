@@ -6,19 +6,24 @@ import { Query, ApolloProvider } from 'react-apollo'
 import Queries from './graphql/queries'
 import Home from './pages/Home';
 
-export const AppContext = React.createContext({ data: { user: null } });
+export const AppContext = React.createContext({ data: { oneUser: null } });
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql'
 });
+
+const users = {
+  ammar: "617c0d453cd87c218cb1cfd8"
+
+}
+
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <Query query={Queries.ALL_USERS}>
+      <Query query={Queries.ONE_USER} variables={{ _id: users.ammar }}>
         {({ loading, error, data }) => {
               if (loading || error) return <ActivityIndicator size="large" color="#0000ff" />
-              console.log(data)
               return (
-                <AppContext.Provider value={{...data.user}} style={styles.container}>
+                <AppContext.Provider value={{...data.oneUser}} style={styles.container}>
                   <Home />
                 </AppContext.Provider>
               )
