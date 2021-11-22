@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import ApolloClient from "apollo-boost";
 import { Query, ApolloProvider } from 'react-apollo'
 import Queries from './graphql/queries'
