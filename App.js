@@ -3,7 +3,7 @@ import { ActivityIndicator } from 'react-native';
 import ApolloClient from "apollo-boost";
 import { Query, ApolloProvider } from 'react-apollo'
 import Queries from './graphql/queries'
-import Home from './pages/Home';
+import HomeScreen from './screens/HomeScreen';
 
 export const AppContext = React.createContext({ data: { oneUser: null } });
 const client = new ApolloClient({
@@ -23,7 +23,7 @@ export default function App() {
               if (loading || error) return <ActivityIndicator size="large" color="#0000ff" />
               return (
                 <AppContext.Provider value={{...data.oneUser}} style={styles.container}>
-                  <Home />
+                  <HomeScreen />
                 </AppContext.Provider>
               )
             }}

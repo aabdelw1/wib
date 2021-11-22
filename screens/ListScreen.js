@@ -7,7 +7,7 @@ import Header from '../components/list/Header';
 
 
 
-const List = (props) => {
+const ListScreen = (props) => {
 
   const { flames } = props
   return (
@@ -41,4 +41,4 @@ const Container = styled.View`
   justify-content: center;
 `;
 
-export default List
+export default ListScreen

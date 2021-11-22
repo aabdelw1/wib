@@ -5,16 +5,16 @@ import styled from 'styled-components/native'
 import { Query } from 'react-apollo'
 import Queries from '../graphql/queries'
 import { AppContext } from '../App';
-import List from './List';
+import ListScreen from './ListScreen';
 
-export default function Home() {
+export default function HomeScreen() {
 
   return (
       <AppContext.Consumer>
         {
           ({ email, password, firstName, lastName, gender, doa, groups, flames }) =>
         <SafeAreaView>
-          <List flames={flames}/>
+          <ListScreen flames={flames}/>
         </SafeAreaView>
         }       
       </AppContext.Consumer>
