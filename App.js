@@ -4,6 +4,8 @@ import ApolloClient from "apollo-boost";
 import { Query, ApolloProvider } from 'react-apollo'
 import Queries from './graphql/queries'
 import HomeScreen from './screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import Tabs from './navigation/tabs'
 
 export const AppContext = React.createContext({ data: { oneUser: null } });
 const client = new ApolloClient({
@@ -23,7 +25,9 @@ export default function App() {
               if (loading || error) return <ActivityIndicator size="large" color="#0000ff" />
               return (
                 <AppContext.Provider value={{...data.oneUser}} style={styles.container}>
-                  <HomeScreen />
+                  <NavigationContainer>
+                    <Tabs/>
+                  </NavigationContainer>
                 </AppContext.Provider>
               )
             }}
@@ -34,6 +38,6 @@ export default function App() {
 
 const styles = {
   container: {
-    flex: 1
+    flex: 1,
   }
 };

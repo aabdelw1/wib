@@ -5,7 +5,7 @@ import styled from 'styled-components/native'
 
 
 const People = () => {
-  return <Text>Hello</Text>
+  return <Text>Hellloooo</Text>
 }
 
 

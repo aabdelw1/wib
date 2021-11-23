@@ -13,9 +13,9 @@ export default function HomeScreen() {
       <AppContext.Consumer>
         {
           ({ email, password, firstName, lastName, gender, doa, groups, flames }) =>
-        <SafeAreaView>
+        // <SafeAreaView>
           <ListScreen flames={flames}/>
-        </SafeAreaView>
+        // </SafeAreaView>
         }       
       </AppContext.Consumer>
 
