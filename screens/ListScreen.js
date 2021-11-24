@@ -8,10 +8,10 @@ import Header from "../components/list/Header";
 const ListScreen = (props) => {
   const { flames } = props;
   return (
-    <>
+    <Container>
       <Header />
       <People />
-    </>
+    </Container>
   );
 };
 
@@ -23,6 +23,7 @@ const ListScreen = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    
     alignItems: "center",
     justifyContent: "center",
   },
