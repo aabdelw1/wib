@@ -7,9 +7,6 @@ import MapScreen from '../screens/MapScreen'
 import StatsScreen from '../screens/StatsScreen'
 import ProfileScreen from '../screens/ProfileScreen'
 
-// var path = require('path');
-
-
 const tabBarOptions = {
   tabBarShowLabel:false,
   headerShown: false,
@@ -18,7 +15,6 @@ const tabBarOptions = {
   elevation: 0,
   height: 90,
 }}
-
 
 const tabs =[{
   name: "List",
@@ -57,10 +53,10 @@ const Tabs = () => {
                   style = {{
                     width:25,
                     height: 25, 
-                    tintColor: focused ? '#e32f45' : '#748c94',
+                    tintColor: focused ? '#4361EE' : '#748c94',
                   }}
                 />
-                <Text style={{color: focused ? '#e32f45' : '#748c94', fontSize: 12, marginTop: 5}}>
+                <Text style={{color: focused ? '#4361EE' : '#748c94', fontSize: 12, marginTop: 5}}>
                   {tab.name}
                 </Text>
               </View>
@@ -68,36 +64,7 @@ const Tabs = () => {
             }}
           />)
         })
-
-
       }
-
-
-      {/* <Tab.Screen 
-        name="List" 
-        component={tabs[0].component}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
-            <Image
-              source={require('../assets/navIcons/list.png')}
-              resizeMode="contain"
-              style = {{
-                width:25,
-                height: 25, 
-                tintColor: focused ? '#e32f45' : '#748c94',
-              }}
-            />
-            <Text style={{color: focused ? '#e32f45' : '#748c94', fontSize: 12, marginTop: 5}}>
-              List
-            </Text>
-          </View>
-          ),
-        }}
-      />
-      <Tab.Screen name="Map" component={MapScreen}/>
-      <Tab.Screen name="Stats" component={StatsScreen}/>
-      <Tab.Screen name="Profile" component={ProfileScreen}/> */}
     </Tab.Navigator>
   )
 }
