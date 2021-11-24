@@ -1,24 +1,19 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import styled from 'styled-components/native'
-import People from '../components/list/People'
-import Header from '../components/list/Header';
-
-
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import styled from "styled-components/native";
+import People from "../components/list/People";
+import Header from "../components/list/Header";
 
 const ListScreen = (props) => {
-
-  const { flames } = props
+  const { flames } = props;
   return (
     <>
-
-         <Header/>
-          <People/>
-          </>
+      <Header />
+      <People />
+    </>
   );
-}
-
+};
 
 // {
 //   flames.map((i, key) => {
@@ -28,9 +23,8 @@ const ListScreen = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
@@ -41,4 +35,4 @@ const Container = styled.View`
   justify-content: center;
 `;
 
-export default ListScreen
+export default ListScreen;
