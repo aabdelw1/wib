@@ -4,10 +4,12 @@ import { ActivityIndicator } from 'react-native';
 import ApolloClient from "apollo-boost";
 import { Query, ApolloProvider } from 'react-apollo'
 import Queries from './graphql/queries'
-import HomeScreen from './screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import Tabs from './navigation/tabs'
-import RootStackScreen from './screens/RootStack/RootStackScreen'
+
+
+import {AppStack} from './screens/rnAuthStack';
+import {AuthStack} from './screens/rnAuthStack';
 
 export const AppContext = React.createContext({ data: { oneUser: null } });
 const client = new ApolloClient({
@@ -19,6 +21,8 @@ const users = {
 
 }
 
+const authData = false
+
 export default function App() {
   return (
     <ApolloProvider client={client}>
@@ -27,10 +31,8 @@ export default function App() {
               if (loading || error) return <ActivityIndicator size="large" color="#0000ff" />
               return (
                 <AppContext.Provider value={{...data.oneUser}} style={styles.container}>
-                  
                   <NavigationContainer>
-                    {/* <Tabs/> */}
-                    <RootStackScreen/>
+                    {authData ? <AppStack /> : <AuthStack />}
                   </NavigationContainer>
                 </AppContext.Provider>
               )

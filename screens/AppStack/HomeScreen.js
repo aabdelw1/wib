@@ -3,8 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import styled from 'styled-components/native'
 import { Query } from 'react-apollo'
-import Queries from '../graphql/queries'
-import { AppContext } from '../App';
+import Queries from '../../graphql/queries'
+import { AppContext } from '../../App';
 import ListScreen from './ListScreen';
 
 export default function HomeScreen() {

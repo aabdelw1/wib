@@ -1,11 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { View, Text, Image } from "react-native";
-import HomeScreen from '../screens/HomeScreen'
-import ListScreen from '../screens/ListScreen'
-import MapScreen from '../screens/MapScreen'
-import StatsScreen from '../screens/StatsScreen'
-import ProfileScreen from '../screens/ProfileScreen'
+// import HomeScreen from '../screens/AppStack/HomeScreen'
+import ListScreen from '../screens/AppStack/ListScreen'
+import MapScreen from '../screens/AppStack/MapScreen'
+import StatsScreen from '../screens/AppStack/StatsScreen'
+import ProfileScreen from '../screens/AppStack/ProfileScreen'
 
 const tabBarOptions = {
   tabBarShowLabel:false,
