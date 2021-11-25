@@ -1,3 +1,4 @@
+// import 'react-native-gesture-handler';
 import React from 'react';
 import { ActivityIndicator } from 'react-native';
 import ApolloClient from "apollo-boost";
@@ -6,7 +7,7 @@ import Queries from './graphql/queries'
 import HomeScreen from './screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import Tabs from './navigation/tabs'
-// import RootStackScreen from './screens/RootStack/RootStackScreen'
+import RootStackScreen from './screens/RootStack/RootStackScreen'
 
 export const AppContext = React.createContext({ data: { oneUser: null } });
 const client = new ApolloClient({
@@ -28,8 +29,8 @@ export default function App() {
                 <AppContext.Provider value={{...data.oneUser}} style={styles.container}>
                   
                   <NavigationContainer>
-                    <Tabs/>
-                    {/* <RootStackScreen/> */}
+                    {/* <Tabs/> */}
+                    <RootStackScreen/>
                   </NavigationContainer>
                 </AppContext.Provider>
               )
