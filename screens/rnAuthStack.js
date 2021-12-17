@@ -7,8 +7,6 @@ import SignInScreen from './RootStack/SignInScreen'
 import SignUpScreen from './RootStack/SignUpScreen'
 
 import Tabs from '../navigation/tabs'
-
-
  const Stack = createStackNavigator()
 
  export const AppStack = () => {

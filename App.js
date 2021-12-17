@@ -5,22 +5,21 @@ import { Query, ApolloProvider } from 'react-apollo'
 import Queries from './graphql/queries'
 import { NavigationContainer } from '@react-navigation/native';
 import Tabs from './navigation/tabs'
+import { AppContext } from './context/AppContext';
 
 
 import {AppStack} from './screens/rnAuthStack';
 import {AuthStack} from './screens/rnAuthStack';
 
-export const AppContext = React.createContext({ data: { oneUser: null } });
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql'
 });
 
 const users = {
-  ammar: "617c0d453cd87c218cb1cfd8"
-
+  ammar: "61bb43b3e37f4a6340b1e65b"
 }
 
-const authData = false
+const authData = true
 
 export default function App() {
   return (
@@ -38,7 +37,7 @@ export default function App() {
             }}
       </Query>
     </ApolloProvider>
-  );
+  );  
 }
 
 const styles = {
